@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Maiden+Orange&display=swap');
+
+body{
+    background-image: url("assets/red/bg.png");
+}
+
+:root {
+    --green: #938B49;
+    --brown: #875F5F;
+    --tanbg: #FFE7CF;
+    --red: #DF7E7E;
+     
+}
+
+:pink-theme{
+    --midpink: #EC9F9F;
+    --brown: #875F5F;
+    --tanbg: #FFE7CF;
+}
+/* toggle */
+.theme-toggle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+.theme-toggle p {
+    margin: 0;
+    font-size: 1.5rem;
+    font-family: 'Maiden Orange', cursive;
+    color: var(--brown);
+}
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    background-color: var(--green);
+    border-radius: 24px;
+    width: 100%;
+    height: 100%;
+    transition: background-color 0.3s;
+}
+
+.slider::before {
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    left: 4px;
+    bottom: 2px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+
+.toggle-switch input:checked+.slider {
+    background-color: var(--brown);
+}
+
+.toggle-switch input:checked+.slider::before {
+    transform: translateX(26px);
+}
+
+/*title*/
+.title {
+    font-family: 'Londrina Solid', cursive;
+    color: var(--brown);
+    text-align: center;
+    margin: 50px auto;
+    font-size: 3rem;
+    background-color: var(--tanbg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 1000px;
+    width: 70%;
+    padding:10px 10px;
+    border-radius: 500px;
+    border: 0.5rem var(--brown) solid;
+    box-sizing: border-box;
+    min-height: 100px;
+}
+
+.title span{
+    font-family: 'Maiden Orange', cursive;
+}
+.g{
+    color:var(--red);
+}
+.p{
+    color:var(--green);
+}
+.a{
+    color:var(--red);
+}
+
+button
+{
+    align-items: center;
+}
