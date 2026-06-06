@@ -1,0 +1,126 @@
+
+:root {
+    --green: #938B49;
+    --brown: #875F5F;
+    --tanbg: #FFE7CF;
+    --red: #DF7E7E;
+    --pop: #FFF9CF;
+     
+}
+
+:pink-theme{
+    --midpink: #EC9F9F;
+    --brown: #875F5F;
+    --tanbg: #FFE7CF;
+}
+
+.auth-page {
+    min-height: 100vh;
+    background-image: url("assets/red/bg.png");
+    margin: 0;
+}
+
+.auth-shell {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 24px;
+    box-sizing: border-box;
+}
+
+.auth-card {
+    width: min(100%, 460px);
+    background: var(--tanbg);
+    border: 0.5rem solid var(--brown);
+    border-radius: 42px;
+    padding: 28px 24px 22px;
+    box-sizing: border-box;
+    box-shadow: 0 10px 0 rgba(135, 95, 95, 0.2);
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.auth-eyebrow {
+    margin: 0 0 8px;
+    font-family: 'Maiden Orange', cursive;
+    font-size: 1.5rem;
+    color: var(--brown);
+}
+
+.auth-card h1 {
+    margin: 0 0 18px;
+    font-family: 'Londrina Solid', cursive;
+    font-size: 3rem;
+    color: var(--brown);
+}
+
+.auth-form {
+    display: grid;
+    gap: 14px;
+}
+
+.auth-form label {
+    display: grid;
+    gap: 6px;
+    text-align: left;
+    font-family: 'Maiden Orange', cursive;
+    font-size: 1.3rem;
+    color: var(--brown);
+}
+
+.auth-form input {
+    width: 100%;
+    box-sizing: border-box;
+    border: 0.22rem solid var(--brown);
+    border-radius: 18px;
+    background: rgba(255, 249, 207, 0.85);
+    padding: 12px 14px;
+    font: inherit;
+    color: var(--brown);
+    outline: none;
+}
+
+.auth-form input:focus {
+    box-shadow: 0 0 0 4px rgba(147, 139, 73, 0.25);
+}
+
+.auth-form button {
+    margin-top: 8px;
+    border: 0.35rem solid var(--brown);
+    border-radius: 999px;
+    background: var(--tanbg);
+    color: var(--brown);
+    font-family: 'Maiden Orange', cursive;
+    font-size: 1.9rem;
+    min-height: 64px;
+    cursor: pointer;
+}
+
+.auth-form button:disabled {
+    opacity: 0.7;
+    cursor: wait;
+}
+
+.auth-status {
+    min-height: 1.5em;
+    margin: 0;
+    font-family: 'Maiden Orange', cursive;
+    font-size: 1.2rem;
+    color: var(--green);
+}
+
+.auth-status[data-state="error"] {
+    color: var(--red);
+}
+
+.auth-switch {
+    margin: 14px 0 0;
+    font-family: 'Maiden Orange', cursive;
+    font-size: 1.2rem;
+    color: var(--brown);
+}
+
+.auth-switch a {
+    color: inherit;
+}

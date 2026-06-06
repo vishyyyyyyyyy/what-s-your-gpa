@@ -2,6 +2,92 @@
 
 body{
     background-image: url("assets/red/bg.png");
+    margin: 0;
+    min-height: 100vh;
+}
+
+body.pink-theme {
+    background-image: url("assets/pink/bg.png");
+}
+
+.landing {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    padding: 24px 18px 18px;
+    box-sizing: border-box;
+}
+
+.hero {
+    position: relative;
+    z-index: 1;
+    flex: 1;
+    width: min(100%, 1100px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+}
+
+.decorations {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.decoration {
+    position: absolute;
+    display: block;
+    object-fit: contain;
+}
+
+.decoration--star-top-left {
+    top: 12px;
+    left: 12px;
+    width: 118px;
+    transform: rotate(8deg);
+}
+
+.decoration--swirl-top-right {
+    top: -18px;
+    right: 108px;
+    width: 138px;
+}
+
+.decoration--star-right {
+    top: 170px;
+    right: 24px;
+    width: 92px;
+    transform: rotate(12deg);
+}
+
+.decoration--star-mid-left {
+    left: 154px;
+    top: 414px;
+    width: 72px;
+    transform: rotate(10deg);
+}
+
+.decoration--apple {
+    left: 16px;
+    bottom: 18px;
+    width: 170px;
+}
+
+.decoration--swirl-bottom-right {
+    right: -42px;
+    bottom: -42px;
+    width: 330px;
+}
+
+.decoration--swirl-bottom-right-small {
+    right: 15%;
+    bottom: 10px;
+    width: 128px;
 }
 
 :root {
@@ -9,6 +95,7 @@ body{
     --brown: #875F5F;
     --tanbg: #FFE7CF;
     --red: #DF7E7E;
+    --pop: #FFF9CF;
      
 }
 
@@ -26,6 +113,7 @@ body{
     position: absolute;
     top: 20px;
     right: 20px;
+    z-index: 2;
 }
 .theme-toggle p {
     margin: 0;
@@ -81,8 +169,8 @@ body{
     font-family: 'Londrina Solid', cursive;
     color: var(--brown);
     text-align: center;
-    margin: 50px auto;
-    font-size: 3rem;
+    margin: 0;
+    font-size: 2.5rem;
     background-color: var(--tanbg);
     display: flex;
     flex-direction: column;
@@ -90,11 +178,15 @@ body{
     justify-content: center;
     max-width: 1000px;
     width: 70%;
-    padding:10px 10px;
+    padding: 20px 20px 20px;
     border-radius: 500px;
     border: 0.5rem var(--brown) solid;
     box-sizing: border-box;
     min-height: 100px;
+}
+
+.title h1 {
+    margin: 0;
 }
 
 .title span{
@@ -110,7 +202,63 @@ body{
     color:var(--red);
 }
 
-button
-{
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 34px;
+    margin: 0;
+    flex-wrap: wrap;
+}
+
+.buttons button {
+    display: flex;
     align-items: center;
+    justify-content: center;
+    background-color: var(--tanbg);
+    border: 0.4rem solid var(--brown);
+    border-radius: 999px;
+    padding: 0;
+    min-width: 184px;
+    min-height: 64px;
+    font-family: 'Maiden Orange', cursive;
+    font-size: 2rem;
+    color: var(--brown);    
+    overflow: hidden;
+}
+
+.buttons button a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: inherit;
+    text-decoration: none;
+    padding: 0 20px;
+}
+
+.buttons button:hover {
+    transform: translateY(-1px);
+    background-color: var(--pop);
+    color: var(--red);
+    border: 0.4rem solid var(--green);   
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.buttons button:active {
+    transform: translateY(1px);
+}
+
+/* every p element child of landing! */
+.landing > p { 
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 14px;
+    margin: 0;
+    text-align: center;
+    font-family: 'Maiden Orange', cursive;
+    font-size: 1.75rem;
+    color: var(--brown);
 }
